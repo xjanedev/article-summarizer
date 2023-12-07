@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   fill="none"
+   shapeRendering="geometricPrecision"
+   stroke="currentColor"
+   strokeLinecap="round"
+   strokeLinejoin="round"
+   strokeWidth="1.5"
+   viewBox="0 0 24 24"
+   width="14"
+   height="14"
+   version="1.1"
+   xmlns="http://www.w3.org/2000/svg">
+  <path
+     d="M3 6h18m-16 0v14a2 2 0 002 2h12a2 2 0 002-2V6m-16 0V4a2 2 0 012-2h8a2 2 0 012 2v2m-12 2h12m-8 4v6m4-6v6"/>
+</svg>
