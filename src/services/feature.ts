@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface Article {
+export interface Article {
   url: string;
   summary: string;
 }
 
-interface ArticleState {
+export interface ArticleState {
   articles: Article[];
 }
 

@@ -8,18 +8,24 @@ import {
   removeArticle,
   clearArticles,
 } from "../services/feature";
+import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
+
+const isFetchBaseQueryError = (
+  error: unknown
+): error is FetchBaseQueryError & { data?: { error?: string } } => {
+  return typeof error === "object" && error !== null && "status" in error;
+};
 
 const Demo = () => {
   const [article, setArticle] = useState<Article>({ url: "", summary: "" });
   const [copied, setCopied] = useState<string | boolean>(false);
 
   const dispatch = useAppDispatch();
-  const allArticle = useAppSelector(state => state.articles.articles);
+  const allArticles = useAppSelector(state => state.articles.articles);
   const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     const { data } = await getSummary({ articleUrl: article.url });
 
     if (data?.summary) {
@@ -72,7 +78,7 @@ const Demo = () => {
           </button>
         </form>
         <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
-          {allArticle.map((item, index) => (
+          {allArticles.map((item, index) => (
             <div
               key={`link-${index}`}
               onClick={() => setArticle(item)}
@@ -104,17 +110,18 @@ const Demo = () => {
         >
           Clear All History
         </button>
-        {/* 모든 기록 삭제 버튼 추가 */}
       </div>
       <div className='my-10 max-w-full flex justify-center items-center'>
         {isFetching ? (
           <img src={loader} alt='loader' className='w-20 h-20 object-contain' />
-        ) : error ? (
+        ) : isFetchBaseQueryError(error) && error.data ? (
           <p className='font-inter font-bold text-black text-center'>
             Well, that wasn't supposed to happen...
             <br />
             <span className='font-satoshi font-normal text-gray-700'>
-              {error?.data?.error}
+              {error.data.error
+                ? error.data.error
+                : "An unknown error occurred"}
             </span>
           </p>
         ) : (
