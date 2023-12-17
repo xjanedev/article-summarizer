@@ -17,8 +17,14 @@
 
 ## Demo
 
-![스크린샷 2023-12-15 오후 5 52](https://github.com/xjanedev/article-summarizer/assets/127685269/0c0575e6-72f3-4842-b66d-ba76880a0b1a)
-![스크린샷 2023-12-15 오후 5 51](https://github.com/xjanedev/article-summarizer/assets/127685269/8128a2dc-92f0-41de-9f17-4fa093547c28)
+<br />
+
+<p align="center">  <img src="https://github.com/xjanedev/article-summarizer/assets/127685269/0c0575e6-72f3-4842-b66d-ba76880a0b1a" align="center" width="40%">  <img src="https://github.com/xjanedev/article-summarizer/assets/127685269/8128a2dc-92f0-41de-9f17-4fa093547c28" align="center" width="40%">
+</p>
+
+<br />
+<br />
+
 
 
 
@@ -32,6 +38,8 @@
 | 검색 기록 저장 | 이전에 검색한 기록을 저장하고 확인 할 수 있고 각각의 검색기록 삭제와 전체 삭제기능 구현                        |
 | URL 복사              | URL을 클립보드에 복사하여 공유하기 쉽도록 구현                             |
 | 반응형 지원                 | 반응형 UI로 모바일 최적화                                                    |
+
+<br />
 
 
 ## 프로젝트로 배운 점
