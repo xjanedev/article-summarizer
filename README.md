@@ -19,15 +19,13 @@
 
 <br />
 
-
-
-
 https://github.com/xjanedev/article-summarizer/assets/127685269/24555aab-b007-41af-9cce-5cc9abecb8ba
-
-
 
 <br/>
 
+## Screenshot
+
+<br />
 
 <p align="center">  <img src="https://github.com/xjanedev/article-summarizer/assets/127685269/0c0575e6-72f3-4842-b66d-ba76880a0b1a" align="center" width="40%">  <img src="https://github.com/xjanedev/article-summarizer/assets/127685269/8128a2dc-92f0-41de-9f17-4fa093547c28" align="center" width="40%">
 </p>
